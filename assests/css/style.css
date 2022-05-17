@@ -1,8 +1,8 @@
 * {
     padding: 0;
     margin: 0; 
-    font-family:'Times New Roman', Times, serif
     box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
 }
 
 body {
@@ -129,3 +129,19 @@ body {
 #quiz #question h2:first-child {
     margin: 0 10px 0 10px;
 }
+
+#quiz #choiceList {
+    height: 450px;
+    width: 1000%;
+    position: absolute;
+    top: 160px;
+
+}
+
+#quiz #optionList h4 {
+    height: 50px;
+    width: 500px;
+    line-height: 50px;
+    margin: 5px 0;
+}
+
