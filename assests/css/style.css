@@ -1,7 +1,7 @@
 * {
     padding: 0;
     margin: 0; 
-    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family:'Times New Roman', Times, serif
     box-sizing: border-box;
 }
 
@@ -16,7 +16,7 @@ body {
     height: auto;
     width: auto;
 }
-
+/* start */
 #start {
     height: 80px;
     width: 250px;
@@ -36,8 +36,8 @@ body {
     background: #b29600;
 
 }
-
-#guide {
+/* guide */
+#guide, #quiz {
     height: auto;
     
 
@@ -77,4 +77,55 @@ body {
 
 #guide #button button:hover {
     background: pink;
+}
+
+/* quiz */
+#quiz {
+    display: block;
+    height: 500px;
+    position: relative;
+}
+#quiz #qHeader  {
+    height: 70px;
+    width: 1000%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    border-radius: 30px 0;
+
+}
+
+#quiz #qHeader h5 {
+    font-size: 30px;
+    margin: 0 20px;
+
+    
+}
+
+#quiz #qHeader #timer {
+    height: 55px;
+    width: 250px;
+    display: flex;
+    flex-direction: row;
+    position: absolute;
+    right: 15px;
+}
+
+#quiz #question {
+    position: absolute;
+    top: 90px;
+    display: flex;
+    flex-direction: row;
+}
+
+#quiz #question h2 {
+    font-size: 30px;
+
+}
+
+#quiz #question h2:first-child {
+    margin: 0 10px 0 10px;
 }
