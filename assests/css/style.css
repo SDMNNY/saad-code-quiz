@@ -1,4 +1,4 @@
-* {
+* { 
     padding: 0;
     margin: 0; 
     box-sizing: border-box;
@@ -8,16 +8,10 @@
 body {
     display: grid;
     place-items: center;
-    height: 1500px;
-    background:powderblue;
+    background: powderblue;
 }
 
-#container {
-    height: auto;
-    width: auto;
-}
-/* start */
-#start {
+#startButton {
     height: 80px;
     width: 250px;
     text-align: center;
@@ -25,123 +19,7 @@ body {
     background: pink;
     color: #000;
     font-size: 25px;
-    font-weight: 500;
     border-radius: 30px 15px;
     border: 2px solid;
     cursor: pointer;
-    display: none;
 }
-
-#start:hover {
-    background: #b29600;
-
-}
-/* guide */
-#guide, #quiz {
-    height: auto;
-    
-
-}
-
-#guide h2 {
-    font-size: 60px;
-}
-
-#guide h3 {
-    height: 50px;
-    width: 100%;
-    align-items: 20px;
-    font: 25px;
-}
-
-#guide #button {
-    height: 60px;
-    width: 1000%;
-    display: flex;
-    justify-content: flex-end;
-
-}
-
-#guide #button button {
-    height: 60px;
-    width: 1000%;
-    margin: 10px 25px;
-    border: none;
-    border-radius: 30px 15px;
-}
-
-
-#guide #button button:last-child {
-    margin: 15 px 0;
-}
-
-#guide #button button:hover {
-    background: pink;
-}
-
-/* quiz */
-#quiz {
-    display: block;
-    height: 500px;
-    position: relative;
-}
-#quiz #qHeader  {
-    height: 70px;
-    width: 1000%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    border-radius: 30px 0;
-
-}
-
-#quiz #qHeader h5 {
-    font-size: 30px;
-    margin: 0 20px;
-
-    
-}
-
-#quiz #qHeader #timer {
-    height: 55px;
-    width: 250px;
-    display: flex;
-    flex-direction: row;
-    position: absolute;
-    right: 15px;
-}
-
-#quiz #question {
-    position: absolute;
-    top: 90px;
-    display: flex;
-    flex-direction: row;
-}
-
-#quiz #question h2 {
-    font-size: 30px;
-
-}
-
-#quiz #question h2:first-child {
-    margin: 0 10px 0 10px;
-}
-
-#quiz #choiceList {
-    height: 450px;
-    width: 1000%;
-    position: absolute;
-    top: 160px;
-
-}
-
-#quiz #optionList h4 {
-    height: 50px;
-    width: 500px;
-    line-height: 50px;
-    margin: 5px 0;
-}
-
