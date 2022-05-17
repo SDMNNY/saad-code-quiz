@@ -39,7 +39,7 @@ body {
 
 #guide {
     height: auto;
-    display: none;
+    
 
 }
 
@@ -47,10 +47,34 @@ body {
     font-size: 60px;
 }
 
-# guide h3 {
+#guide h3 {
     height: 50px;
     width: 100%;
     align-items: 20px;
     font: 25px;
+}
 
+#guide #button {
+    height: 60px;
+    width: 1000%;
+    display: flex;
+    justify-content: flex-end;
+
+}
+
+#guide #button button {
+    height: 60px;
+    width: 1000%;
+    margin: 10px 25px;
+    border: none;
+    border-radius: 30px 15px;
+}
+
+
+#guide #button button:last-child {
+    margin: 15 px 0;
+}
+
+#guide #button button:hover {
+    background: pink;
 }
