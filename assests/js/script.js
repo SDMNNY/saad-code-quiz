@@ -266,5 +266,5 @@ restart.addEventListener("click", function () {
 
 clearScore.addEventListener("click", function () {
     localStorage.clear();
-    document.getElementById("highscore").innerHTML = "";
+    document.getElementById("highscores").innerHTML = "";
 });
