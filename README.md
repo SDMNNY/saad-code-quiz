@@ -1,5 +1,5 @@
 # saad-code-quiz
-url: 
+url: https://sdmnny.github.io/saad-code-quiz/
 
 My attempt to create a multple choice quiz using Javascript fundamentals! 
 
