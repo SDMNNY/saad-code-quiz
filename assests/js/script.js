@@ -5,6 +5,7 @@ var startBtn = document.getElementById("startButton");
 var nextBtn = document.getElementById("nextButton");
 var questionContEL = document.getElementById("qContainer");
 var startContainerEl = document.getElementById("start")
+var questionEl = document.getElementById("question")
 var ansButtonEL = document.getElementById("ansBTN");
 var checkAnsEL = document.getElementById("inspectAns");
 var viewScores = document.getElementById("topscore");
