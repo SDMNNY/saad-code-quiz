@@ -1,7 +1,7 @@
 var timerleft = 75;
 var timerIdentity;
 var timerEl = document.getElementById("timer");
-var startBtn = document.getElementById("starttButton");
+var startBtn = document.getElementById("startButton");
 var nextBtn = document.getElementById("nextButton");
 var questionContEL = document.getElementById("qContainer");
 var ansButtonEL = document.getElementById("ansBTN");
@@ -12,7 +12,9 @@ var clearScore = document.getElementById("clear-button")
 var initalField = document.getElementById("playerscore");
 var restart = document.getElementById("restart-button");
 var scoreBoard = document.getElementById("player-score");
-var scores = JSON.parse(localStorage.getItem("scores"))
+var scores = JSON.parse(localStorage.getItem("scores")) || [];
+
+var shuffledQuestions, currentQuestionIndex;
 
 var questions = [
     { 
@@ -61,3 +63,56 @@ var questions = [
         ]
     },
 ];
+
+
+
+// start button 
+
+startBtn.addEventListener("click",startGame);
+nextBtn.addEventListener("click",() => {
+    currentQuestionIndex++
+    setNextQuestion()
+
+});
+
+// timer
+function timerTick() {
+    timerleft--;
+    timerEl.textContent= "Time: " + timerleft;
+    if (timerleft <= 0) {
+        saveScore();
+    }
+}
+
+// start the quiz 
+function startGame() {
+    timerIdentity = setInterval(timeTick, 1000);
+    questionContEL.classList.add("hideCont");
+    shuffledQuestions = questions.sort(() => Math.random() - .5)
+    currentQuestionIndex = 0
+    questionContEL.classList.remove("hideCont");
+
+    timerTick();
+    setNextQuestion();
+};
+
+function setNextQuestion() {
+    resetState();
+    showQuestion(shuffledQuestions[currentQuestionIndex]);
+};
+
+
+function showQuestion(question) {
+    questionContEL.innerText = question.question
+    question.answers.forEach(answer => {
+        var button = document.createElement("button")
+        button.innerText = answer.text
+        button.classList.add("btn")
+        if (answer.correct) {
+            button.dataset.correct = answer.correct
+        }
+        button.addEventListener("click", selectAnswer)
+        ansButtonEL.appendChild(button)
+    })
+};
+
