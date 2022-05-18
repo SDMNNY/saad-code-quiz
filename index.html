@@ -7,13 +7,39 @@
     <title>CODE QUIZ</title>
 </head>
 <body>
+<!-- score -->
+    <header>
+            <div class="score"> 
+                <a id="topscore">View Scores</a>
+            </div>
+            <div id="time" class="timer"> Time: 75</div>
+    </header>
+        
+    <!-- start -->
     <div id="start">
         <h1 id="startHeader">Javascript Quiz Challenge</h1>
         <p>Welcome To The Challenge Young Padawan. Please try to answer all questions correctly, you will lose time if answered incorrectly!</p>
 
-        <button type="button" id="startButton">Start Quiz</button>
-
+        <div id="buttoncontrols">
+            <button class="startBtn" id="startButton">Start Quiz</button>
+        </div>
     </div>
+
+    <!-- questions -->
+    <section id= "qContainer" class="hideCont">
+        <h1 id="question">Question</h1>
+        <div id="ansBTN" class="answerBtn">
+            <button class="button">1</button>
+            <button class="button">2</button>
+            <button class="button">3</button>
+            <button class="button">4</button>
+
+        </div>
+
+
+    </section>
+
+
     
     
 

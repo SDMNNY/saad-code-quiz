@@ -3,11 +3,6 @@
     margin: 0; 
     box-sizing: border-box;
     font-family: 'Times New Roman', Times, serif;
-}
-
-body {
-    display: grid;
-    place-items: center;
     background: powderblue;
 }
 
